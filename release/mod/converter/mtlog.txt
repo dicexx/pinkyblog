@@ -1,0 +1,60 @@
+AUTHOR: testuser
+TITLE: テスト
+STATUS: Publish
+CONVERT BREAKS: 1
+ALLOW COMMENTS: 1
+ALLOW PINGS: 1
+PRIMARY CATEGORY: test
+DATE: 10/23/2008 23:10:39
+-----
+BODY:
+試しに書いてみようかな。
+-----
+EXTENDED BODY:
+
+-----
+EXCERPT:
+試しに書いてみようかな。
+-----
+KEYWORDS:
+
+-----
+COMMENT:
+AUTHOR: hdliykhi
+EMAIL: rpeyyo@xnqhif.com
+IP: 83.233.30.38
+URL: http://ccugawghorde.com/
+DATE: 10/27/2008 10:04:56
+vkClis  &lt;a href=&quot;http://bdfryszccdkr.com/&quot;&gt;bdfryszccdkr&lt;/a&gt;, [url=http://buacgwezcigk.com/]buacgwezcigk[/url], [link=http://cwrlxencpuwz.com/]cwrlxencpuwz[/link], http://ryhwfnsbwsvp.com/
+-----
+
+
+--------
+
+AUTHOR: testuser
+TITLE: テスト記事パート2
+STATUS: Draft
+CONVERT BREAKS: 0
+ALLOW COMMENTS: 1
+ALLOW PINGS: 1
+PRIMARY CATEGORY: test &gt; test2
+DATE: 10/25/2008 21:27:18
+-----
+BODY:
+こんな風にもかけるらしいね。
+<strong>さて・・・</strong>
+-----
+EXTENDED BODY:
+<p><a href="http://pinkyblog.net" target="_blank">続き続きっと。</a></p>
+
+<p><a href="http://scl.littlestar.jp/blogtest/sb/img/img0_koboruto.gif"><img src="http://scl.littlestar.jp/blogtest/sb/img/thm0_koboruto.gif" class="thumb" alt="testpict" title="testpict" width="120" height="120" /></a></p>
+-----
+EXCERPT:
+こんな風にもかけるらしいね。さて・・・
+-----
+KEYWORDS:
+
+-----
+
+
+--------

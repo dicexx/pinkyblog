@@ -1,0 +1,49 @@
+<form action="@post_path" method="post">
+
+
+<h3>出力するHTMLのメニュー表示設定</h3>
+<table>
+	<tr>
+		<th>表示する</th><th>表示名</th><th>デフォルト</th>
+	</tr>
+	<tr amrita_src="menu_form_rows">
+		<td><input type="checkbox" amrita_src="checkbox" name="@name" value="true" checked="@checked"></td>
+		<td><input type="text" name="@caption_name" value="@caption_value" size="16">
+		</td><td amrita_src="default"></td>
+	</tr>
+</table>
+
+<ul><li>通常のメニュー設定は反映されません。</li></ul>
+
+<h3>オプション</h3>
+<p>
+	<select name="span">
+		<option amrita_src="spans" value="@value"><span amrita_src="caption"></span></option>
+	</select>
+</p>
+<ul class="check-list">
+	<li><input type="checkbox" id="IncludeCDPInput" name="include_cdp" value="1" checked="checked"><label for="IncludeCDPInput">A. CSS着せ替えテンプレートのコピーを行う</label></li>
+	<li><input type="checkbox" id="IncludeResInput" name="include_res" value="1" checked="checked"><label for="IncludeResInput">B. リソースディレクトリ内にある全ファイルのコピーを行う</label></li>
+</ul>
+
+<h3>注意</h3>
+<ul>
+	<li>CGIファイルと同じ位置に「snapshot」ディレクトリを作り、その下に以下のデータをすべて出力します。<ul>
+		<li>全公開記事のHTML</li>
+		<li>記事一覧のHTML（タグでの参照や並び替えはできません）</li>
+		<li>CSS着せ替えテンプレート（テンプレートが使っている画像なども含む。<em>オプションA</em>）</li>
+		<li>記事に添付された全画像ファイル＆リソースディレクトリ（標準では <code>./res/</code>）内にある全ファイルのコピー（<em>オプションB</em>）</li>
+	</ul></li>
+	<li>出力された記事は、普通のHTMLとして（CGIにアクセスせずに）読むことができます。</li>
+	<li><strong>記事の数によってはかなりの時間と負荷がかかります</strong>ので、ご注意ください。</li>
+	<li><strong>「実行する」ボタンを連打しないでください。</strong></li>
+</ul>
+
+<p>
+	<input type="submit" value="スナップショット機能を実行する">
+	<input type="hidden" name="action" value="snapshot">
+	<input type="hidden" name="path_info" value="post">
+</p>
+
+</form>
+

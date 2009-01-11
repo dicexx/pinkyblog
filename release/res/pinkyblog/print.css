@@ -1,0 +1,419 @@
+@charset "Shift_JIS";
+/* *********************************************** */
+/* 
+ * CSS着せ替えテンプレート用印刷デザイン ver.1.1（2008年10月20日修正）
+ * 制作者: 坂取
+ * URI: http://az-store.nrym.org/
+ *      http://az-store.nrym.org/download/template/css-designplate/print/
+ *
+ * 【使用方法】
+ * (1) style.css1行目の「@charset "Shift_JIS";」の直下に
+ *     「@media screen {」を、一番後ろに「}」を書き加える。
+ *     （style.cssに指定されたスタイルをscreenメディアのみに
+ *     読み込まれるようにする）
+ * (2) 「@charset "Shift_JIS";」直下に
+ *     「@import url("./print.css");」と書く。
+ * (3) print.cssと書き換えたstyle.cssをアップロードする。
+ */
+/* *********************************************** */
+@media print
+{
+body
+	{
+	vertical-align: 0;
+	font: normal normal normal 10pt/1.5 "ＭＳ 明朝",serif;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: #ffffff;
+	background-image: none;
+	}
+		head+body
+			{
+			width: 165mm;
+			max-width: 100%;
+			min-width: 80%;
+			margin: 0 auto;
+			}
+	/* マージン */
+h1,h2,h3,h4,h5,h6
+	{
+	font-family: "ＭＳ ゴシック",sans-serif;
+	margin-top: 15pt;
+	font-weight: 700;
+	padding: 0; /* ←↓@media allに上書きするために必要 */
+	background: transparent;
+	color: #000000;
+	}
+div
+	{
+	margin: 0;
+	padding: 0;
+	}
+address,blockquote,p,pre,ul,ol,dl,form,table,object,embed,del,ins
+	{
+	margin: 15pt 0;
+	}
+	/* body直下のinsとdelはブロックレベル要素扱いにする */
+body>del,body>ins
+	{
+	margin: 0;
+	display: block;
+	}
+	/* 見出し */
+h1
+	{
+	font-size: 170%;
+	text-align: center;
+	margin-top: 0;
+	}
+h2
+	{
+	font-size: 150%;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	}
+h3
+	{
+	font-size: 125%;
+	border-bottom: 1pt solid #000000;
+	}
+h4,h5,h6
+	{
+	font-size: 110%;
+	}
+	/* アドレス */
+address
+	{
+	}
+	/* 引用 */
+blockquote
+	{
+	margin-left: 2em;
+	}
+			/* 引用元URI表示 */
+		blockquote[cite]:after
+			{
+			display: block;
+			content: ""attr(cite)"";
+			padding: 0.25em 0 0 0;
+			text-align: right;
+			line-height: 1.0;
+			}
+					/* blockquote内の要素余白 */
+				blockquote p,blockquote dl,blockquote ol,blockquote ul
+					{
+					margin: 0;
+					padding: 0;
+					}
+					/* blockquote内の要素余白（IE6以外のモダンブラウザ一括） */
+				blockquote>*
+					{
+					margin: 0;
+					padding: 0;
+					}
+				blockquote p+p
+					{
+					margin: 0;
+					padding: 0;
+					}
+				blockquote ol li,blockquote ul li
+					{
+					background-image: none;
+					border: none;
+					list-style-type: none;
+					}
+	/* 段落 */
+p
+	{
+	}
+	/* 整形文 */
+pre
+	{
+	border: 1px solid #000000;
+	padding: 0.5em;
+	overflow: scroll;
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: pre-wrap;      /* CSS3 */
+	word-wrap: break-word;      /* IE 5.5+ */
+	}
+	/* 整形文・WinIE6以外のモダンブラウザに適応 */
+html>body pre
+	{
+	width: auto;
+	overflow: auto;
+	}
+		pre code
+			{
+			border: none;
+			margin: 0;
+			padding: 0;
+			}
+		pre code,
+		pre em,
+		pre strong
+			{
+			}
+	/* 略語 */
+abbr
+	{
+	border-bottom: 1px dotted #000000;
+	}
+		abbr:after
+			{
+			content: "\ff3b\ff1f\ff3d";
+			}
+	/* 引用元 */
+cite
+	{
+	font-weight: 700;
+	}
+	/* コード */
+code
+	{
+	font-family: monospace;
+	border: 1px solid #000000;
+	margin: 0 0.25em;
+	padding: 1px 2px;
+	}
+	/* 定義語 */
+dfn
+	{
+	font-weight: 700;
+	}
+		dfn:before
+			{
+			content:"\3010";
+			}
+		dfn:after
+			{
+			content:"\3011";
+			}
+	/* 強調 */
+em
+	{
+	font-style: oblique;
+	}
+	/* キーボード */
+kbd
+	{
+	margin: 0 0.25em;
+	padding: 1px 2px;
+	border-style: solid;
+	border-width: 1px 2px 2px 1px;
+	background: #fafafa;
+	border-color: #eeeeee #cccccc #cccccc #eeeeee;
+	}
+	/* 引用 */
+q
+	{
+	quotes: "\300c" "\300d" "\300e" "\300f";
+	padding: 1px 2px;
+	}
+		q:before
+			{
+			content: open-quote;
+			}
+		q:after
+			{
+			content: close-quote;
+			}
+	/* プログラムの出力例 */
+samp
+	{
+	margin: 0 0.25em;
+	padding: 1px 2px;
+	border: 1px dotted #cccccc;
+	}
+	/* 強調 */
+strong
+	{
+	font-weight: 700;
+	}
+	/* より強調 */
+strong strong
+	{
+	font-size: 125%;
+	}
+	/* 変数 */
+var
+	{
+	font-family: monospace;
+	}
+	/* 04. Hypertext Module */
+
+a,a:link,a:visited
+	{
+	color: #0000ff;
+	}
+	/* 05. List Module */
+dt
+	{
+	margin-bottom : 0.25em;
+	font-weight: 700;
+	}
+dd
+	{
+	margin-left : 15pt;
+	margin-bottom : 0.25em;
+	}
+		dd ul,dd ol
+			{
+			margin : 0;
+			padding-left : 1em;
+			}
+		dd ul.text,dd ul.image
+			{
+			margin: 0;
+			padding: 0;
+			}
+		dd ul.text li,dd ul.image li
+			{
+			margin: 0;
+			padding: 0;
+			}
+ul,ol
+	{
+	margin-left: 2em;
+	}
+		ul li
+			{
+			list-style-type: disc;
+			}
+		ol li
+			{
+			list-style-type: decimal;
+			}
+	/* 06. Edit Module */
+	/* 削除・挿入 */
+body>*>del,
+body>*>ins
+	{
+	margin: 0;
+	padding: 0;
+	display: inline;
+	}
+	/* 削除 */
+del
+	{
+	text-decoration: line-through;
+	}
+	/* 追加 */
+ins
+	{
+	text-decoration: underline;
+	}
+/* 07. Forms Modules */
+fieldset
+	{
+	border: none;
+	}
+legend
+	{
+	display: none;
+	}
+input,
+textarea,
+select
+	{
+	padding: 0.1em;
+	color: #000000;
+	border: 1px solid;
+	line-height: 1.2;
+	border: 1px solid #000000;
+	}
+	/* 08. Table Modules */
+	/* 表 */
+table
+	{
+	border-collapse: collapse;
+	/* width: 100%; */
+	margin: 1em auto;
+	}
+		caption
+			{
+			font-size: 11.5pt;
+			font-weight: 700;
+			text-align: center;
+			}
+th, td
+	{
+	border: 1px solid #000000;
+	padding: 6px 8px;
+	vertical-align: top;
+	text-align: left;
+	font-size: 10.5pt;
+	text-align: center;
+	}
+	/* 09. Image Module */
+img
+	{
+	margin: 1px;
+	padding: 0;
+	}
+a img
+	{
+	border: none;
+	}
+	/* 10. Object Module */
+object,
+embed
+	{
+	margin: 1em 2em;
+	}
+	/* 11. Presentation Module */
+	/* 太字 */
+b
+	{
+	font-weight: 700;
+	}
+	/* 文字(大) */
+big
+	{
+	font-size: 120%;
+	}
+	/* 水平線 */
+hr
+	{
+	display: none;
+	}
+	/* 斜体 */
+i
+	{
+	font-style: oblique;
+	}
+	/* 文字(小) */
+small
+	{
+	font-size: 80%;
+	}
+	/* 上つき文字 */
+sup
+	{
+	font-size: 84%;
+	vertical-align: super;
+	}
+	/* 下つき文字 */
+sub
+	{
+	font-size: 84%;
+	vertical-align: sub;
+	}
+	/* 等幅 */
+tt
+	{
+	font-family: monospace;
+	}
+/* ==================== */
+/* CSS着せ替えテンプレートプロジェクト */
+/* ==================== */
+ul#PAN,
+div#MENU,
+ul.modori,
+div#FOOTER
+	{
+	display : none;
+	}
+}

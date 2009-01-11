@@ -1,0 +1,15 @@
+<form action="@post_path" method="post">
+
+<ul><li><em>一度削除したコメントは元に戻せません。</em>十分に注意して削除してください。</li></ul>
+
+<h3><label for="CommentPassword">パスワード</label></h3>
+<p amrita_src="password_form"><input type="password" name="password" id="CommentPassword" size="16" maxlength="16">　（コメントの編集・削除に必要になります。半角英数4～16文字、空欄可）</p>
+
+<p>
+	<input type="submit" value="コメントを削除する">
+	<input type="hidden" name="action" value="delete_comment">
+	<input type="hidden" name="entry_id" value="@entry_id">
+	<input type="hidden" name="comment_index" value="@comment_index">
+	<input type="hidden" name="path_info" value="/post">
+</p></form>
+</ul>

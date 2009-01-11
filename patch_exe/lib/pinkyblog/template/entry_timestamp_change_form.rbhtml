@@ -1,0 +1,19 @@
+<form action="${@post_path}" method="post">
+
+<dl>
+<?rb @entries.each do |entry| ?>
+	<dt>「${entry.title}」作成日時</dt>
+	<dd>${@context.time2str_short(entry.created)} → <input type="text" size="20" name="created_${entry.id}" value="${@context.time2str_short(entry.created)}"></dd>
+	<dt>「${entry.title}」最終更新日時</dt>
+	<dd>${@context.time2str_short(entry.last_modified)} → <input type="text" size="20" name="last_modified_${entry.id}" value="${@context.time2str_short(entry.last_modified)}"></dd>
+<?rb end ?>
+</dl>
+
+
+<p>
+	<input type="submit" value="この日時で確定">
+	<input type="hidden" name="action" value="change_timestamp">
+	<input type="hidden" name="path_info" value="post">
+</p>
+</form>
+

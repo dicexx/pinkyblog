@@ -1,0 +1,110 @@
+
+<script type="text/ecmascript"><!--
+DETAIL_DATA = {};
+--></script>
+
+
+<p id="SelectingTool"></p>
+<form action="${@post_path}" method="post">
+
+<?rb [['新しくインポートされる記事', @new_entry_data], ['既存の記事に上書きされる記事', @overlap_entry_data]].each do |caption, entry_data| ?>
+	<h3>${caption}</h3>
+	
+	<?rb if entry_data.empty? then ?>
+		<p>（なし）</p>
+	<?rb else ?>
+		<?rb case @format ?>
+		<?rb when PinkyBlog::LF::PBLOG, PinkyBlog::LF::PBLOG_GZIP ?>
+			<script type="text/ecmascript"><!--
+			<?rb entry_data.each do |index, entry| ?>
+				DETAIL_DATA[${index}] = {
+					'作成日時': '${@view_context.time2str_short(entry.created)}',
+					'タグ': '${entry.tags.join(", ")}　',
+					'記法': '${entry.format}',
+					'本文サイズ': '${PinkyBlog::Util.size_to_kb(entry.body.length)}',
+					'添付画像ファイル': (${@image_numbers[index]} ? '${@image_numbers[index]}ファイル、${PinkyBlog::Util.size_to_kb(@image_sizes[index])}' : 'なし'),
+					'コメント数': '${entry.comments.size}',
+				};
+			<?rb end ?>
+			--></script>
+			
+			<table class="pinky-import-entry-select">
+			<thead>
+				<tr>
+					<th></th>
+					<th>タイトル</th>
+					<th>更新日時</th>
+					<th></th>
+				</tr>
+			</thead>
+			
+			<tbody>
+			<?rb entry_data.each do |index, entry| ?>
+				<tr>
+					<td><input type="checkbox" name="indexies" value="${index}" checked="checked"></td>
+					<td>${entry.title}</td>
+					<td>${@vc.time2str_short(entry.updated)}</td>
+					<td><a class="pinky-detail-switch" href="${@vc.route_to('/script_error')}" onclick="toggle_detail_entry($(this), $('#INFO-${index}'), DETAIL_DATA[${index}]); return false;"></a>
+					</td>
+				</tr>
+				<tr style="display: none" id="INFO-${index}">
+				</tr>
+			<?rb end ?>
+			</tbody>
+			</table>
+			
+		<?rb when PinkyBlog::LF::MT_UTF8, PinkyBlog::LF::MT_EUC, PinkyBlog::LF::MT_SJIS ?>
+	
+	
+			<table class="pinky-import-entry-select">
+			<thead>
+				<tr>
+					<th></th>
+					<th>タイトル</th>
+					<th>日付</th>
+					<th>記事ID情報</th>
+					<th>コメント</th>
+					<th>カテゴリ（タグ）</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+			<?rb entry_data.each do |index, entry| ?>
+				<tr>
+					<td><input type="checkbox" name="indexies" value="${index}" checked="checked"></td>
+					<td>${entry.title}</td>
+					<td>${@view_context.time2str_short(entry.updated)}</td>
+					<td>${'あり' if entry.id}</td>
+					<td class="pinky-numeric">${entry.comments.size}</td>
+					<td>${entry.tags.join(', ')}</td>
+				</tr>
+			<?rb end ?>
+			</tbody>
+			</table>
+				
+			<h3>注意</h3>
+			<ul>
+				<li>記事に設定されたカテゴリは、取り込まれた後では全てタグとして扱われます。</li>
+				<li>執筆者名、トラックバック、概要、キーワード、（MovableTypeにおける）タグは取り込まれません。</li>
+				<li>各コメントのIPアドレスは取り込まれません。</li>
+				<li>「本文」と「本文追記」の区別はしません。両方ともが記事の本文として取り込まれます。</li>
+			</ul>
+
+		<?rb end # of case ?>
+	<?rb end # of if ?>
+<?rb end # of each ?>
+
+
+
+
+<p>
+	<input type="hidden" name="action" value="import_list">
+	<input type="hidden" name="path_info" value="/post">
+	<input type="hidden" name="format" value="${@format}">
+	<input type="submit" name="submit_show" value="インポート実行">
+</p>
+
+
+
+</form>
+

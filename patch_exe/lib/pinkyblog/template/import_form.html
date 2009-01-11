@@ -1,0 +1,30 @@
+
+<form action="@post_path" method="post" enctype="multipart/form-data" >
+
+<h3>インポートしたいファイル</h3>
+<p><input type="file" name="target"></p>
+
+
+<h3>ファイル形式</h3>
+<ul class="check-list">
+	<li><input id="FormatInput-Auto" type="radio" name="format" value="auto" checked="checked"><label for="FormatInput-Auto">自動</label></li>
+	<li><input id="FormatInput-MTCompatible-UTF8" type="radio" name="format" value="mt_utf-8"><label for="FormatInput-MTCompatible-UTF8">MovableType互換形式（文字コード：UTF-8）</label></li>
+	<li><input id="FormatInput-MTCompatible-SJIS" type="radio" name="format" value="mt_shift-jis"><label for="FormatInput-MTCompatible-SJIS">MovableType互換形式（文字コード：Shift-JIS）</label></li>
+	<li><input id="FormatInput-MTCompatible-EUCJP" type="radio" name="format" value="mt_euc-jp"><label for="FormatInput-MTCompatible-EUCJP">MovableType互換形式（文字コード：EUC-JP）</label></li>
+	<li><input id="FormatInput-Pblog" type="radio" name="format" value="pblog"><label for="FormatInput-Pblog">pblog形式（圧縮なし）</label></li>
+	<li amrita_src="zlib_installed"><input id="FormatInput-Pblog-Gzip" type="radio" name="format" value="pblog_gzip"><label for="FormatInput-Pblog-Gzip">pblog形式（gzip圧縮）</label></li>
+	<li amrita_src="zlib_not_installed"><del>pblog形式（gzip圧縮）</del>（この環境ではインポートできません）</li>
+</ul>
+
+<ul>
+	<li>「自動」でファイルの読み込みに失敗する場合には、文字コードを明示的に指定してください。</li>
+</ul>
+
+
+
+<p>
+	<input type="submit" value="ファイルを解析する">
+	<input type="hidden" name="action" value="import_file">
+	<input type="hidden" name="path_info" value="/post">
+</p></form>
+</ul>

@@ -1,0 +1,17 @@
+<form action="@post_path" method="post" class="pinky-referer-table-form">
+<ul>
+	<li>一行に一組ずつ、部分URLとサイト名をスペースで区切って入力してください。</li>
+	<li>指定した<em>部分URLを含む</em>ページからのアクセスは、すべてサイト名で表示されるようになります。</li>
+	<li>サイト名の部分に"-"（半角）とだけ入力すると、そのURLリファラ一覧に表示されなくなります。</li>
+	<li>リスト中で上にあるURLほど優先されます。</li>
+</ul>
+
+<textarea name="table" cols="80" rows="8" style="max-width:100%" amrita_src="table"></textarea>
+
+
+<p>
+	<input type="submit" value="編集完了">
+	<input type="hidden" name="action" value="referer_config">
+	<input type="hidden" name="path_info" value="post">
+</p>
+</form>

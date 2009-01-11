@@ -1,0 +1,51 @@
+<h3>ディレクトリの絶対パス</h3>
+<p><code amrita_src="pwd"></code></p>
+
+<!--
+<h3>パーミッションチェック</h3>
+<ul>
+	<li amrita_src="permission_checks"></li>
+</ul>
+-->
+
+<h3>ディスク使用量</h3>
+<table class="pinky-disk-use">
+	<tr>
+		<th>ディレクトリパス</th><th>使用量</th><th>内容</th><th></th>
+	</tr>
+	<tr amrita_src="disk_use">
+		<td><code amrita_src="path"></code></td>
+		<td class="pinky-numeric" nowrap><em amrita_src="size"></em></td>
+		<td amrita_src="description"></td>
+		<td><a href="@tree_href">ファイルツリー表示</a></td>
+	</tr>
+</table>
+
+<h3>ファイル状態チェック</h3>
+<form method="get" action="@parity_check_href"><p><button type="submit">チェック実行</button></p></form>
+
+
+<h3>パフォーマンステスト</h3>
+<dl>
+	<dt amrita_src="perfomance+"></dt>
+	<dd amrita_src="perfomance+"></dd>
+</dl>
+
+<h3>デバッグ情報</h3>
+<ul>
+	<li>この表示には、システムに関わる重要な情報が含まれているため、<em>web上でむやみに転載・公開しないようにしてください</em>（必要な情報だけを伝達するようにしてください）。</li>
+</ul>
+
+<pre amrita_src="debug_info"></pre>
+
+
+
+
+<!--
+<h3>環境変数</h3>
+<dl>
+	<dt amrita_src="env+"></dt>
+	<dd amrita_src="env+" style="font-family: monospace;"></dd>
+</dl>
+-->
+

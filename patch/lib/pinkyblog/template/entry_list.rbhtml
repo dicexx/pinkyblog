@@ -1,0 +1,19 @@
+<p>${@filter_info}</p>
+
+<?rb unless @view_context.snapshot_mode? then ?>
+<form action="${@action_path}" method="get"><p>
+<input type="submit" name="submit_modified" value="更新順で">
+<input type="submit" name="submit_created" value="作成順で">
+<input type="submit" name="submit_access" value="アクセス数順で">
+<input type="submit" name="submit_file_size" value="本文ファイルサイズ順で">
+<input type="submit" name="submit_title" value="記事名順で">
+並べ替え
+</p></form>
+<?rb end ?>
+
+<dl>
+<?rb @items.each do |item| ?>
+  <dt><a href="${item[:href]}">${item[:caption]}</a></dt>
+  <dd>${item[:info]}</dd>
+<?rb end ?>
+</dl>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<feed xmlns='http://www.w3.org/2005/Atom'>
+  <id amrita_src="id"></id>
+  <title amrita_src="title"></title>
+  <subtitle amrita_src="subtitle"></subtitle>
+  <updated amrita_src="updated"></updated>
+  <generator amrita_src="generator"></generator>
+  <link href="@alternate_link" rel='alternate'/>
+  <link href="@self_link" rel='self'/>
+  <author amrita_src="author">
+    <name amrita_src="name"></name>
+  </author>
+	
+  <entry amrita_src="entries">
+    <id amrita_src="id"></id>
+    <title amrita_src="title"></title>
+    <link href='@alternate_link' rel='alternate'/>
+    <updated amrita_src="updated"></updated>
+    <published amrita_src="published"></published>
+    <summary amrita_src="summary"></summary>
+    <category amrita_src="categories" term="@term"></category>
+    <content type="html" amrita_src="content"></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,42 @@
+<form action="@post_path" method="post">
+<h3>入力サイズ制限</h3>
+<h4>ひとことメッセージ</h4>
+<p amrita_src="message_length">
+	<input type="radio" id="MessageLengthLimit-VeryLoose" name="message_length_limit" value="very-loose" checked="@very_loose_checked"><label for="MessageLengthLimit-VeryLoose">とても緩い（<span amrita_src="very_loose_length"></span>文字まで）</label>
+	<input type="radio" id="MessageLengthLimit-Loose" name="message_length_limit" value="loose" checked="@loose_checked"><label for="MessageLengthLimit-Loose">緩い（<span amrita_src="loose_length"></span>文字まで）</label>
+	<input type="radio" id="MessageLengthLimit-Tight" name="message_length_limit" value="tight" checked="@tight_checked"><label for="MessageLengthLimit-Tight">きつい（<span amrita_src="tight_length"></span>文字まで）</label>
+</p>
+<h4>記事へのコメント</h4>
+<p amrita_src="comment_length">
+	<input type="radio" id="CommentLengthLimit-VeryLoose" name="comment_length_limit" value="very-loose" checked="@very_loose_checked"><label for="CommentLengthLimit-VeryLoose">とても緩い（<span amrita_src="very_loose_length"></span>文字まで）</label>
+	<input type="radio" id="CommentLengthLimit-Loose" name="comment_length_limit" value="loose" checked="@loose_checked"><label for="CommentLengthLimit-Loose">緩い（<span amrita_src="loose_length"></span>文字まで）</label>
+	<input type="radio" id="CommentLengthLimit-Tight" name="comment_length_limit" value="tight" checked="@tight_checked"><label for="CommentLengthLimit-Tight">きつい（<span amrita_src="tight_length"></span>文字まで）</label>
+</p>
+<ul>
+	<li>文字数は、全角文字・半角文字で同じようにカウントされます。</li>
+</ul>
+
+
+<h3>スパムフィルタ</h3>
+<ul>
+	<li><input type="checkbox" id="BlockHTTP" name="block_http" value="true" checked="@block_http"><label for="BlockHTTP">「http://」が5個以上含まれる投稿を弾く</label></li>
+	<li><input type="checkbox" id="BlockASCII" name="block_ascii" value="true" checked="@block_ascii"><label for="BlockASCII">本文の90%以上が半角文字の投稿を弾く</label></li>
+</ul>
+
+<h3>禁止文字列</h3>
+<p>
+	<textarea name="ng_word" cols="40" rows="8" amrita_src="ng_word"></textarea>
+</p>
+<ul>
+	<li>一行に一つずつ入力してください。</li>
+</ul>
+
+
+
+
+<p>
+	<input type="submit" value="設定を保存して完了">
+	<input type="hidden" name="action" value="post_limit">
+	<input type="hidden" name="path_info" value="post">
+</p>
+</form>

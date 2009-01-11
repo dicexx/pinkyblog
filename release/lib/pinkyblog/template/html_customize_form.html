@@ -1,0 +1,45 @@
+<ul><li>出力されるHTML文書の文書型宣言は、HTML 4.01 Transitionalです。</li></ul>
+
+<form action="@post_path" method="post">
+<h3><label for="Head">HTML head</label></h3>
+<textarea id="Head" amrita_src="head" name="head" cols="80" rows="8" class="long-text-edit"></textarea>
+<ul>
+	<li>ここで記入したHTML片が、HTML文書のhead要素内に挿入されます。</li>
+	<li>link要素の追加、スタイルシートやECMAScript（JavaScript）の記述などに利用してください。</li>
+</ul>
+
+<h3><label for="KiziFoot">記事部フッター</label></h3>
+<textarea id="KiziFoot" amrita_src="kizi_foot" name="kizi_foot" cols="80" rows="8" class="long-text-edit" ></textarea>
+<ul>
+	<li>ここで記入したHTML片が、記事部分（div要素内）のいちばん後ろに挿入されます。</li>
+</ul>
+
+<h3><label for="BodyFoot">文書フッター</label></h3>
+<textarea id="BodyFoot" amrita_src="body_foot"  name="body_foot" cols="80" rows="8" class="long-text-edit" ></textarea>
+<ul>
+	<li>ここで記入したHTML片が、連絡先リストの後（body要素内のいちばん後ろ）に挿入されます。</li>
+	<li>アクセス解析スクリプトの呼び出しなどに利用してください。</li>
+</ul>
+
+<h3>連絡先リスト</h3>
+<table>
+	<tr><th>表示名</th><th>リンク先（URL）</th></tr>
+	<tr amrita_src="extra_address_rows">
+		<td><input type="text" size="20" name="@caption_name" value="@caption_value"></td>
+		<td><input type="text" size="60" name="@href_name" value="@href_value"></td>
+	</tr>
+	<tr><td>CSS Designplate</td><td>http://css-designplate.info/</td></tr>
+	<tr><td>Pinky:blog</td><td>http://scl.littlestar.jp/pinkyblog/</td></tr>
+</table>
+<ul>
+	<li>表示名が空欄であれば、その連絡先は表示されません。</li>
+</ul>
+
+
+
+<p>
+	<input type="submit" value="設定を完了">
+	<input type="hidden" name="action" value="html_customize">
+	<input type="hidden" name="path_info" value="/post">
+</p>
+</form>

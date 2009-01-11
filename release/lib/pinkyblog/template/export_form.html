@@ -1,0 +1,65 @@
+
+<form action="@post_path" method="post">
+
+<div amrita_src="encoding">
+<h3>文字コード（エンコーディング）</h3>
+<ul class="check-list">
+	<li><input id="EncodingInput-UTF8" type="radio" name="encoding" value="utf-8" checked="checked"><label for="EncodingInput-UTF8">UTF-8（推奨）</label></li>
+	<li><input id="EncodingInput-SJIS" type="radio" name="encoding" value="shift-jis"><label for="EncodingInput-SJIS">Shift-JIS</label></li>
+	<li><input id="EncodingInput-EUCJP" type="radio" name="encoding" value="euc-jp"><label for="EncodingInput-EUCJP">EUC-JP</label></li>
+</ul>
+
+<ul>
+	<li>他のblogツールへ移行する場合には、そのblogツールが対応している文字コードを選択してください。</li>
+</ul>
+</div>
+
+<div amrita_src="compressing">
+<h3>ファイル圧縮</h3>
+<ul class="check-list">
+	<li><input id="EncodingInput-SJIS" type="radio" name="compressing" value="no" checked="checked"><label for="EncodingInput-SJIS">圧縮しない（テキストファイルとして出力。推奨）</label></li>
+	<li amrita_src="zlib_not_installed"><del>gzipで圧縮する</del>（この環境では使用不可）</li>
+	<li amrita_src="zlib_installed"><input id="EncodingInput-UTF8" type="radio" name="compressing" value="gzip"><label for="EncodingInput-UTF8">gzipで圧縮する</label></li>
+</ul>
+
+<ul>
+	<li>圧縮することでファイルサイズを抑えることができますが、環境によっては圧縮されたファイルをインポートできない場合があります（blogが設置されているサーバーに、zlibライブラリがインストールされていなければなりません）。</li>
+</ul>
+
+</div>
+
+
+<h3><label for="FileNameInput">出力ファイル名</label></h3>
+<p><label for="FileNameInput"><code>temp/</code></label><input id="FileNameInput" type="text" size="20" name="file_name" value="@default_file_name"></p>
+<ul>
+	<li>リソースディレクトリ（標準では <code>./res/</code>）の下に出力されます。</li>
+	<li>gzipで圧縮した場合、ファイル名の後ろに <code>.gz</code> が付きます。</li>
+</ul>
+
+<!--
+<h3>オプション</h3>
+<ul class="check-list">
+	<li><input id="WithAttachedImagesInput" type="checkbox" name="with_attached_images" value="true" checked="checked"><label for="WithAttachedImagesInput">添付画像ファイルを出力する</label></li>
+</ul>
+-->
+
+<h3>注意点</h3>
+<ul amrita_src="mt_caution">
+	<li><em>添付画像、および記事の更新日時は出力されません。</em></li>
+	<li>記事の本文は、HTMLに変換されてから出力されます。</li>
+	<li>記事に付けられたタグは、タグではなくカテゴリーとして出力されます。</li>
+	<li>コメントの番号は出力されません。そのため、以前に削除されたコメントがあると、取り込んだときにコメントの番号が変わることがあります。</li>
+</ul>
+<ul>
+	<li><em>記事の数によってはかなりの時間と負荷がかかります</em>ので、ご注意ください。</li>
+	<li><strong>実行ボタンを連打しないでください。</strong></li>
+</ul>
+
+
+<p>
+	<input type="submit" value="エクスポート実行">
+	<input type="hidden" name="action" value="export">
+	<input type="hidden" name="path_info" value="/post">
+	<input type="hidden" name="format" value="@format">
+</p></form>
+</ul>

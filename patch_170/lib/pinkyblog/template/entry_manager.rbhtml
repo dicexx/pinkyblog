@@ -1,0 +1,58 @@
+<form action="${@post_path}" method="post">
+<p id="SelectingTool"></p>
+<table class="pinky-entry-manager">
+<thead>
+	<tr>
+		<th></th>
+		<th>タイトル</th>
+		<th>最終更新</th>
+		<th>サイズ</th>
+		<th>添付画像</th>
+		<th>アクセス</th>
+		<th>コメント</th>
+	</tr>
+</thead>
+<tbody>
+<?rb @rows.each do |row| ?>
+	<tr>
+		<td rowspan="2"><input type="checkbox" name="entry_ids" value="${row[:id]}" ${row[:checked]}></td>
+		<td rowspan="2"><a href="${row[:href]}">${row[:caption]}</a></td>
+		<td>${row[:last_modified]}</td>
+		<td class="pinky-numeric">${row[:size]}</td>
+		<td class="pinky-numeric">${row[:attached_size]}</td>
+		<td class="pinky-numeric">${row[:access]}</td>
+		<td class="pinky-numeric">${row[:comment]}</td>
+	</tr>
+	<tr>
+		<td colspan="5">
+		<?rb row[:tags].each do |tag| ?>
+			<a class="tag" href="${tag[:href]}" title="このタグが付いたページをすべて選択">${tag[:name]}</a>
+		<?rb end ?>
+		</td>
+	</tr>
+<?rb end ?>
+</tbody>
+</table>
+
+<h3>チェックした記事に対し、以下の操作を行う</h3>
+<p>
+	<input type="submit" name="submit_show" value="公開する">
+	<input type="submit" name="submit_hide" value="非公開にする">
+	<input type="submit" name="submit_change_timestamp" value="作成/更新日時を変更">
+</p>
+<p title="空白で区切って複数のタグを入力できます">
+	<input type="text" size="30" name="target_tag">
+	<input type="submit" name="submit_add_tag" value="タグ追加">
+	<input type="submit" name="submit_delete_tag" value="タグ削除">
+</p>
+<p>
+	<input type="submit" name="submit_delete_all_tag" value="全てのタグを削除">
+	<input type="submit" name="submit_delete" value="記事を削除（trashディレクトリに移動）">
+	<input type="hidden" name="action" value="act_entries">
+	<input type="hidden" name="path_info" value="post">
+</p>
+
+
+
+</form>
+

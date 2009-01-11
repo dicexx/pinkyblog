@@ -1,0 +1,120 @@
+/* URL */
+
+
+#KIZI code{
+	margin-left : 0.3em; 
+	margin-right : 0.3em;
+}
+
+#KIZI ul.pinky-navigation,
+#KIZI ul.pinky-navigation li{
+	margin-left : 0;
+	padding-left : 0;
+	list-style : none;
+}
+
+
+#KIZI ul.pinky-navigation li.pinky-next-page{
+	text-align:right;
+	display:block;
+
+}
+
+#KIZI ul.pinky-navigation li.pinky-prev-page{
+	text-align:left;
+	display:block;
+
+}
+
+#KIZI ul.pinky-navigation li.pinky-page-index{
+	text-align:right;
+}
+
+
+#KIZI ul.pinky-taglist li{
+	margin-right: 1em;
+	display:inline;
+}
+
+#KIZI ul.pinky-taglist{
+	overflow:auto;
+	max-height:8em;
+}
+
+#KIZI div.pinky-comment div.pinky-info{
+	font-size : x-small;
+	text-align:right;
+}
+
+#KIZI span.pinky-info{
+	font-size:x-small;
+}
+
+
+#KIZI ul.check-list{
+	list-style: none;
+}
+
+#KIZI ul.pinky-section-footer{
+	text-align:right;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+
+#KIZI ul.pinky-section-footer li{
+	text-align: right;
+	display: inline;
+	margin-left: 1em;
+}
+
+
+
+#KIZI a.pinky-tag{
+	margin-right:1em;
+}
+
+
+#KIZI table.pinky-entry-manager,
+#KIZI table.pinky-import-entry-select{
+	width : 100%;
+}
+
+#KIZI table th{
+	text-align: center;
+}
+
+
+#KIZI table.pinky-entry-manager td,
+#KIZI table.pinky-disk-use td,
+#KIZI table.pinky-parity-check td{
+	padding-right : 0.5em;
+	padding-left : 0.5em;
+}
+
+#KIZI td.pinky-numeric{
+	text-align : right;
+}
+
+#KIZI table.pinky-entry-manager a.tag{
+	font-size : x-small;
+}
+
+
+#KIZI textarea.long-text-edit{
+	width: 100%;
+	font-family: monospace;
+}
+
+
+
+/* Script: Textsize Resizer */
+div.grippie {
+	background:#EEEEEE url(script/grippie.png) no-repeat scroll center 2px;
+	border-color:#DDDDDD;
+	border-style:solid;
+	border-width:0pt 1px 1px;
+	cursor:s-resize;
+	height:9px;
+	overflow:hidden;
+}

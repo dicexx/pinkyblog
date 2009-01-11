@@ -1,0 +1,29 @@
+<ul>
+	<li><em>sendmailがお使いのサーバーに組み込まれていないと、メール通知機能は利用できません。</em></li>
+</ul>
+
+<form action="@post_path" method="post">
+<h3><label for="SendMailPath">sendmailのパス</label></h3>
+<p>
+	<input type="text" id="SendMailPath" name="sendmail_path" value="@sendmail_path" size="30">
+</p>
+<ul>
+	<li>空欄にすると、メール通知機能は無効になります。</li>
+	<li>パスが分からない場合には、サーバーの管理者にお問い合わせください（レンタルサーバーの場合には、おそらくそのサーバーの公式サイトに、sendmailのパスが記載されています）。</li>
+</ul>
+
+<h3>通知メールの送り先</h3>
+<p>
+	<input type="text" name="to_1" value="@to_1" size="50"><br>
+	<input type="text" name="to_2" value="@to_2" size="50"><br>
+	<input type="text" name="to_3" value="@to_3" size="50">
+</p>
+
+
+<p>
+	<input type="submit" value="設定を保存して完了">
+	<input type="submit" name="submit_with_test_mail" value="設定を保存して同時にテストメールを送信">
+	<input type="hidden" name="action" value="mail_notification_config">
+	<input type="hidden" name="path_info" value="/post">
+</p>
+</form>

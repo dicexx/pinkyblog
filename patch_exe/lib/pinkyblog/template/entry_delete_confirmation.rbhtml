@@ -1,0 +1,38 @@
+<form action="${@post_path}" method="post">
+<p>以下の記事をすべてtrashディレクトリに移動します。よろしいですか？</p>
+<table class="pinky-entry-manager">
+<thead>
+	<tr>
+		<th>タイトル</th>
+		<th>最終更新</th>
+		<th>サイズ</th>
+		<th>添付画像</th>
+		<th>アクセス</th>
+		<th>コメント</th>
+	</tr>
+</thead>
+<tbody>
+<?rb @rows.each do |row| ?>
+	<tr>
+		<td><a href="${row[:href]}">${row[:caption]}</a></td>
+		<td>${row[:last_modified]}</td>
+		<td class="pinky-numeric">${row[:size]}</td>
+		<td class="pinky-numeric">${row[:attached_size]}</td>
+		<td class="pinky-numeric">${row[:access]}</td>
+		<td class="pinky-numeric">${row[:comment]}</td>
+	</tr>
+<?rb end ?>
+</tbody>
+</table>
+
+<p>
+	<input type="submit" name="submit_delete_ok" value="削除する">
+	<input type="submit" name="submit_delete_ng" value="削除しない">
+</p>
+	<input type="hidden" name="action" value="act_entries">
+	<input type="hidden" name="path_info" value="post">
+<?rb @rows.each do |row| ?>
+	<input type="hidden" name="entry_ids" value="${row[:id]}">
+<?rb end ?>
+</form>
+

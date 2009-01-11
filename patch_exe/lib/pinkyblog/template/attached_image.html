@@ -1,0 +1,25 @@
+<p><img src="@src" width="@width" height="@height" border="0"></p>
+
+<dl>
+	<dt>画像の大きさ</dt>
+	<dd>幅<span amrita_src="width"></span>px × 高さ<span amrita_src="height"></span>px</dd>
+	<dt>ファイルサイズ</dt>
+	<dd><span amrita_src="filesize"></span></dd>
+</dl>
+
+
+<div amrita_src="action_form">
+<h3>画像操作</h3>
+<form action="@post_uri">
+<input type="hidden" name="action" value="act_image">
+<input type="hidden" name="entry_id" value="@entry_id">
+<input type="hidden" name="image_name" value="@image_name">
+<ul>
+	<li><input type="text" size="30" name="basename" value="@basename"><span amrita_src="extname"></span> に<input type="submit" name="submit_rename" value="名前を変更する"></li>
+	<li><input type="submit" name="submit_delete" value="削除する"></li>
+</ul>
+</form>
+<ul>
+	<li>画像の名前に使えるのは、半角英数字、およびアンダーバーとピリオド（<code>_ .</code>）のみです。</li>
+</ul>
+</div>

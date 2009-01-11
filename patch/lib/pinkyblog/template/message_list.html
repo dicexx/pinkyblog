@@ -1,0 +1,8 @@
+<form action="@post_path" method="post" class="pinky-message-list">
+<ul>
+	<li amrita_src="items"><input type="checkbox" name="message_ids" value="@id"> <span amrita_src="content"></span> - <span amrita_src="time" class="pinky-info"></span></li>
+</ul>
+<p><input type="submit" value="チェックしたメッセージを削除"></p>
+<input type="hidden" name="action" value="delete_message">
+<input type="hidden" name="path_info" value="post">
+</form>

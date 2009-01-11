@@ -1,0 +1,58 @@
+<form action="@post_path" method="post" enctype="multipart/form-data" class="pinky-entry-edit-form">
+<h3><label for="EditedEntryTitle">タイトル</label></h3>
+<p amrita_src="title"><input name="title" id="EditedEntryTitle" size="30" type="text" value="@value"></p>
+<h3><label for="EditedEntryContent">本文</label></h3>
+<p><textarea name="content" id="EditedEntryContent" rows="15" cols="80" class="long-text-edit" amrita_src="content"></textarea><br>
+<select amrita_src="format" name="format">
+	<option amrita_src="items" value="@value" selected="@selected"><span amrita_src="caption"></span></option>
+</select> <a href="@format_guide">記事の書き方について</a>
+</p>
+
+<div amrita_src="tag">
+<h3>タグ</h3>
+<h4><label for="EditedEntryTag">既存タグ一覧</label></h4>
+<ul class="pinky-taglist"><li amrita_src="list">
+	<label><input type="checkbox" value="@value" name="@name" checked="@checked"><span amrita_src="caption"></span></label>
+</li></ul>
+<h4><label for="EditedEntryTag">新しいタグをつける</label></h4>
+<p><input name="add_tag" value="@add_tag" id="EditedEntryTag" size="30" type="text"> （スペースで区切って複数入力できます）</p>
+</div>
+
+<div amrita_src="attach_form">
+<h3>画像ファイルの添付</h3>
+<p amrita_src="image_display">
+	<select name="image_display">
+		<option value="original-size" selected="@original_size_selected">記事の最初にフルサイズで表示</option>
+		<option value="small-size" selected="@small_size_selected">記事の最初に縮小サイズで表示</option>
+		<option value="link" selected="@link_selected">記事の最初に画像へのリンクを表示</option>
+		<option value="invisible" selected="@invisible_selected">表示しない</option>
+	</select>
+</p>
+<ul amrita_src="image_list">
+	<li amrita_src="items">
+		<a href="@href"><span amrita_src="name"></span></a> (<span amrita_src="filesize"></span>)
+	</li>
+</ul>
+<p>
+	<input type="file" name="image_file1" style="width: 20em; max-width: 100%"><br />
+	<input type="file" name="image_file2" style="width: 20em; max-width: 100%"><br />
+	<input type="file" name="image_file3" style="width: 20em; max-width: 100%"><br />
+	<input type="submit" name="submit_upload_and_preview" value="アップロードして添付＆プレビュー" title="選択した画像をアップロードして、この記事に添付します">
+</p>
+<ul>
+	<li>添付可能なのは、ファイルサイズが2MB(2,048KB)以内で、拡張子がpng、gif、jpeg、jpgのファイルのみです。</li>
+</ul>
+</div>
+
+<h3>オプション</h3>
+<p>
+	<input type="checkbox" id="EditedEntryInvisible" name="invisible" value="true" checked="@invisible_checked"><label for="EditedEntryInvisible">この記事を公開しない</label><br>
+</p>
+<p>
+	<input type="submit" name="submit_preview" value="プレビュー表示" title="入力した記事の本文が、実際にどのように表示されるかを確認します">
+	<input type="submit" name="submit_complete" value="編集完了" title="確定して記事を保存します">
+	<input type="hidden" name="action" value="edit_entry">
+	<input type="hidden" name="path_info" value="post">
+	<input type="hidden" amrita_src="id" name="id" value="@value">
+</p></form>
+</ul>

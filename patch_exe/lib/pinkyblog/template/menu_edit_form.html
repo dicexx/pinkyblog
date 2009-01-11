@@ -1,0 +1,23 @@
+<form action="@post_path" method="post">
+
+<table>
+	<tr>
+		<th>表示する</th><th>表示名</th><th>デフォルト</th>
+	</tr>
+	<tr amrita_src="menu_form_rows">
+		<td><input type="checkbox" amrita_src="checkbox" name="@name" value="true" checked="@checked"></td>
+		<td><input type="text" name="@caption_name" value="@caption_value" size="16">
+		</td><td amrita_src="default"></td>
+	</tr>
+</table>
+
+<p>
+	<input type="submit" value="設定を保存して完了">
+	<input type="hidden" name="action" value="menu">
+	<input type="hidden" name="path_info" value="post">
+</p>
+</form>
+
+<ul>
+	<li><a href="@direct">もっと細かく設定する（メニュー定義ファイルを直接編集）</a></li>
+</ul>

@@ -1,0 +1,68 @@
+ライセンス・配布条件について
+============================
+
+Pinky:blogは、基本的にNYSLの元で配布されるフリーソフトウェアです。
+ライセンスの条文については、同梱の NYSL_withfaq.txt をご覧ください。
+
+ただし、以下のライブラリや画像ファイル・CSSファイルには、著作者の意向により
+異なるライセンスが適用されます。
+
+
+
+- Rack (lib/rack.rb および lib/rack/ 以下の全ファイル)
+- UUIDTools (lib/uuidtools.rb)
+- Tenjin (lib/tenjin.rb) 
+- Ya2YAML (lib/ya2yaml.rb)
+
+    MITライセンスが適用されます。
+    詳しくはソースコードの初めの部分にある許諾表示（英文）をご覧ください。
+    また、以下のURLに、オープンソースグループ・ジャパンによる日本語参考訳があります。
+
+    http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license
+
+
+
+- amrita-altered (lib/amrita/ 以下の全ファイル）
+- CGI Adjuster (lib/cgisup.rb)
+- ImageSize (lib/image_size.rb および lib/image_size/ 以下の全ファイル)
+- ROpt (lib/ropt.rb)
+- htmlsplit (lib/htmlsplit.rb)
+- rbuconv (lib/uconv.rb, lib/rbuconv.rb, lib/rbuconv_w32.rb, および lib/uconv/ 以下の全ファイル)
+
+    Rubyライセンスが適用されます。
+    詳しくは以下のURLにあるライセンス条文をご覧ください。
+
+    http://www.ruby-lang.org/ja/LICENSE.txt
+
+
+
+- SimpleMail（lib/simplemail.rb）
+- tDiary-like トランスレータ（mod/translator/tdiary-like.rb）
+- BlueCloth（mod/translator/markdown/bluecloth.rb）
+
+    GPL (General Public License) が適用されます。
+    ライセンスの条文（公衆利用許諾）については、同梱の copying/gpl.txt あるいは
+		copying/gpl_ja.txt （日本語参考役）をご覧ください。
+
+
+
+- jQuery (res/pinkyblog/script/jquery.min.js)
+
+    MITライセンスとGPLのデュアル・ライセンスが適用されます。
+    改変・再配布などの際には、デュアル・ライセンスのままで配布するか
+    あるいは、どちらか片方のライセンスを選んで配布することができます。
+
+
+
+
+- 印刷用CSS着せ替えテンプレート (res/pinkyblog/print.css)
+
+    ウェブサイト「AZ Store」にて配布されている作品のため、
+    同サイトの利用規約(http://az-store.nrym.org/about)に準じます。
+
+
+
+- ATOM1.0アイコン (res/pinkyblog/atom10.png)
+
+    「一色政彦 WEB SITE」blog内の記事(http://www.masahiko.info/blog/archives/000745.html)にて
+		配布されている作品のため、著作者である一色政彦氏の意向に従ってください。

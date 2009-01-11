@@ -1,0 +1,14 @@
+<form action="@post_path" method="post" class="pinky-login-form">
+<p>
+	<input name="password" size="30" type="password">
+	<input type="submit" value="ログイン">
+	<input type="hidden" name="action" value="master_login">
+	<input type="hidden" name="path_info" value="post">
+</p>
+<h3>オプション</h3>
+<p><input type="checkbox" name="auto_login" value="1" checked="@auto_login"> 次回から自動的にログインする</p>
+<ul>
+	<li>2週間のあいだアクセスしないと無効になります。</li>
+	<li>この設定をオフにしていると、通常はブラウザを閉じた時点でログアウトとなります。</li>
+</ul>
+</form>

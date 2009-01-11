@@ -1,0 +1,33 @@
+AUTHOR: diceweb
+TITLE: Movable Type 4 へようこそ！
+BASENAME: movable_type_4
+STATUS: Publish
+ALLOW COMMENTS: 0
+CONVERT BREAKS: 0
+ALLOW PINGS: 0
+DATE: 10/27/2008 07:58:15 PM
+-----
+BODY:
+このブログ記事は、Movable Type 4のインストール完了時に、システムによって自動的に作成されたブログ記事です。 新しくなったMT4の管理画面で、早速ブログを更新してみましょう。
+-----
+EXTENDED BODY:
+アスペクト
+-----
+EXCERPT:
+
+-----
+KEYWORDS:
+
+-----
+
+COMMENT:
+AUTHOR: Dice
+EMAIL: 
+IP: 
+URL: 
+DATE: 10/27/2008 07:58:15 PM
+このコメントは、Movable Type のインストール完了時に、システムによって自動的に投稿されたコメントです。MT のブログに投稿されたコメントが、どのように表示されるのかを、ご確認いただけます。
+-----
+
+
+--------

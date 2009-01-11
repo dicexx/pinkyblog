@@ -1,0 +1,20 @@
+<form action="@post_path" method="post">
+<ul>
+	<li>一行に一組ずつ、表示名とメニューコマンドを <code>|</code>（半角パイプ記号）で区切って入力してください。</li>
+	<li>一番上に記述した項目が、そのblogのトップページとして扱われます。</li>
+</ul>
+
+<textarea name="menu_text" cols="80" rows="8" class="long-text-edit" amrita_src="menu_text"></textarea>
+
+
+<p>
+	<input type="submit" value="編集完了">
+	<input type="hidden" name="action" value="menu_text">
+	<input type="hidden" name="path_info" value="post">
+</p>
+</form>
+
+
+<ul>
+	<li><a href="@basic">簡単な設定画面に戻る</a></li>
+</ul>

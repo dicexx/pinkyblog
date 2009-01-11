@@ -1,18 +1,16 @@
 #-----------------------------------------------------------
 # tdiary-like トランスレータ for Pinky:blog
 #
-# Author:   Dice
-# License:  NYSL 0.9982 (http://www.kmonos.net/nysl/)
-# URL:      http://scl.littlestar.jp/
+# Copyright (C) 2001-2005, TADA Tadashi <sho@spc.gr.jp>
+# You can redistribute it and/or modify it under GPL2
+#
+# Arranger:  Dice
 #-----------------------------------------------------------
 
 CAPTION = "tDiary記法で書く"
 
 class Translator
 	def text_to_html(text)
-
-
-
 		sections = text.split(/\n\n/).map{|x| Section.new(x)}
 		
 		

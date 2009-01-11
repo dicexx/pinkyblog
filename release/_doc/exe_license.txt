@@ -1,0 +1,30 @@
+Windows実行ファイル版のライセンス・配布条件について
+===================================================
+
+Pinky:blog Windows実行ファイル版は
+GPL (General Public License) の元で配布されるソフトウェアです。
+ライセンスの条文（公衆利用許諾）については、同梱の _doc/copying/gpl.txt あるいは
+_doc/copying/gpl_ja.txt （日本語参考訳）をご覧ください。
+
+使用したツールやライブラリの著作権表示と入手先は、_doc/exe_copyrights.txt にまとめてあります。
+
+ただし、以下のライブラリや画像ファイル・CSSファイルには、著作者の意向により
+異なるライセンスが適用されます。
+
+
+- Text Area Resizer (res/pinkyblog/script/jquery.textarearesizer.js および同階層の grippie.png)
+
+    jQuery公式サイト内 (http://plugins.jquery.com/project/TextAreaResizer) にて
+		配布されている作品のため、著作者であるbinarybasher氏の意向に従ってください。
+
+
+- 印刷用CSS着せ替えテンプレート (res/pinkyblog/print.css)
+
+    ウェブサイト「AZ Store」にて配布されている作品のため、
+    同サイトの利用規約(http://az-store.nrym.org/about)に準じます。
+
+
+- ATOM1.0アイコン (res/pinkyblog/atom10.png)
+
+    「一色政彦 WEB SITE」blog内の記事 (http://www.masahiko.info/blog/archives/000745.html) にて
+		配布されている作品のため、著作者である一色政彦氏の意向に従ってください。

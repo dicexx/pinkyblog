@@ -7,3 +7,4 @@ rubyのインストールされたサーバー上で、CGIスクリプトとし�
 詳しくは、配布サイト(http://scl.littlestar.jp/pinkyblog/)をご覧ください。
 
 配布条件・ライセンスに関しては、同梱の _doc/license.txt に別途記載しています。
+（Windows実行ファイル版の場合には、 _doc/exe_license.txt に記載しています）

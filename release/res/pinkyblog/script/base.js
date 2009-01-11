@@ -1,3 +1,9 @@
+/*
+	Pinky:blog base-script
+	License: NYSL 0.9982 (http://www.kmonos.net/nysl/)
+*/
+
+
 CAPTIONS = {
 	show_detail: '詳細表示',
 	hide_detail: '隠す'

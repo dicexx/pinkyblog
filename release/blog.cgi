@@ -3,7 +3,7 @@
 #-----------------------------------------------------------
 # Author:   Dice
 # License:  NYSL 0.9982 (http://www.kmonos.net/nysl/)
-# URL:      http://scl.littlestar.jp/
+# URL:      http://scl.littlestar.jp/pinkyblog/
 #-----------------------------------------------------------
 
 begin

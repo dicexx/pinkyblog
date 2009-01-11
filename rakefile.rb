@@ -2,6 +2,7 @@
 # Pinky:Blog rakefile (for windows)
 #
 # Requirement: Exerb, RSpec, 7-zip
+# License: NYSL 0.9982 (http://www.kmonos.net/nysl/)
 #-----------------------------------------------------------
 
 ZIP = 'd:\\prog\\7-zip\\7z.exe'
@@ -20,15 +21,18 @@ SRCS.include 'release/data/**/*'
 SRCS.include 'release/res/**/*'
 SRCS.include 'release/csstemplate/'
 SRCS.include 'release/_doc/**/*'
+SRCS.exclude 'release/_doc/exe_*.txt'
 
 EXE_SRCS = FileList.new
-EXE_SRCS.include 'release/blog_server.exe', 'release/readme.txt', 'release/pinkyblog_conf.rb'
+EXE_SRCS.include 'release/blog_server.exe', 'release/exe_readme.txt', 'release/pinkyblog_conf.rb'
 EXE_SRCS.include 'release/lib/pinkyblog/template/*.*'
 EXE_SRCS.include 'release/lib/rack/**/*.*'
 EXE_SRCS.include 'release/mod/translator/**/*'
 EXE_SRCS.include 'release/data/**/*'
 EXE_SRCS.include 'release/res/**/*'
 EXE_SRCS.include 'release/csstemplate/'
+EXE_SRCS.include 'release/_doc/**/*'
+EXE_SRCS.exclude 'release/_doc/license.txt'
 
 ALL_SRCS = SRCS + EXE_SRCS
 

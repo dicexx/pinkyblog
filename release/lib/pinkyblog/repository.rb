@@ -68,7 +68,7 @@ module PinkyBlog
 		
 		def check_valid
 			unless @dir_path.writable? then
-				raise Error, "データを格納するためのディレクトリ #{@dir_path} が読み込めません。\nディレクトリが存在しないか、またはパーミッションに問題があります。"
+				raise Error, "データを格納するためのディレクトリ #{@dir_path} が読み込めません。\nディレクトリが存在しないか、またはパーミッションに問題がある可能性があります。"
 			end
 			
 			unless entry_dir_path.exist? then
@@ -76,7 +76,7 @@ module PinkyBlog
 			end
 		
 			unless entry_dir_path.writable? then
-				raise Error, "記事データを格納するためのディレクトリ #{entry_dir_path} が読み込めません。\nディレクトリが存在しないか、またはパーミッションに問題があります。"
+				raise Error, "記事データを格納するためのディレクトリ #{entry_dir_path} が読み込めません。\nパーミッションに問題がある可能性があります。"
 			end
 			
 			unless lock_dir_path.exist? then
@@ -85,8 +85,18 @@ module PinkyBlog
 
 			
 			unless lock_dir_path.writable? then
-				raise Error, "ロック情報を作成するためのディレクトリ #{lock_dir_path} が読み込めません。\nディレクトリが存在しないか、またはパーミッションに問題があります。"
+				raise Error, "ロック情報を作成するためのディレクトリ #{lock_dir_path} が読み込めません。\nパーミッションに問題がある可能性があります。"
 			end
+			
+			unless custom_html_dir_path.exist? then
+				Dir.mkdir(custom_html_dir_path)
+			end
+
+			
+			unless custom_html_dir_path.writable? then
+				raise Error, "HTMLカスタマイズ結果を記録するためのディレクトリ #{custom_html_dir_path} が読み込めません。\nパーミッションに問題がある可能性があります。"
+			end
+
 
 		end
 		

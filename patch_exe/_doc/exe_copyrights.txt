@@ -1,0 +1,73 @@
+Using Compiler
+==============
+Exerb:
+    Author: Yuya Kato
+    License: LGPL and Ruby's License (http://exerb.sourceforge.jp/man/doc/license.ja.html)
+    URL: http://exerb.sourceforge.jp/
+
+Using Interpreter
+=================
+ruby:
+    Author: Matz
+    License: Ruby's License
+    URL: http://ruby-lang.org/
+
+Compiled Libraries
+==================
+
+Rack:
+    Copyright (C) 2007, 2008, 2009 Christian Neukirchen <purl.org/net/chneukirchen>
+    License: MIT License
+    URL: http://rack.rubyforge.org/
+
+UUIDTools:
+    Copyright (c) 2005 Robert Aman
+    License: MIT License
+    URL: http://rubyforge.org/projects/uuidtools/
+
+Tenjin:
+    copyright(c) 2007 kuwata-lab all rights reserved.
+    License: MIT License
+    URL: http://www.kuwata-lab.com/tenjin/
+
+Ya2YAML:
+    Copyright (c) 2006 Akira FUNAI
+    License: MIT License
+    URL: http://rubyforge.org/projects/ya2yaml/
+
+amrita-altered:
+    Copyright (c) 2002 Taku Nakajima.
+    Copyright (c) 2003-2005, maintenanced by HORIKAWA Hisashi.
+    License: Ruby's License
+    URL: http://www.nslabs.jp/amrita-altered.rhtml
+
+CGI Adjuster:
+    Copyright (c) 2002-2005 HORIKAWA Hisashi. All rights reserved.
+    License: Ruby's License
+    URL: http://www.nslabs.jp/rubycgi-18compat.rhtml
+
+ImageSize:
+    Author: Keisuke Minami
+    License: Ruby's License
+    URL: http://rubyforge.org/projects/imagesize/
+
+ROpt:
+    Author: Kaoru Shirai
+    License: Ruby's License
+    URL: http://devel.korinkan.co.jp/ruby-ropt/
+
+htmlsplit:
+    Author: MoonWolf
+    Patcher: HORIKAWA Hisashi
+    License: Ruby's License
+    URL: http://www.nslabs.jp/htmlsplit.rhtml
+
+rbuconv:
+    (c) 2003 by yoshidam
+    License: Ruby's License
+    URL: http://www.yoshidam.net/Ruby_ja.html
+		
+SimpleMail:
+    Copyright (C) 1999 R.Chambers
+    License: GPL (General Public License)
+    URL: http://rubyforge.org/projects/simplemail/

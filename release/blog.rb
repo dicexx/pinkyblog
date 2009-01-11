@@ -43,12 +43,13 @@ module Rack
         path    = "; path="    + value[:path]      if value[:path]
         # fix (format to httpdate)
         expires = "; expires=" + value[:expires].clone.httpdate if value[:expires]
+        secure = "; secure"  if value[:secure]
         value = value[:value]
       end
       value = [value]  unless Array === value
       cookie = Utils.escape(key) + "=" +
         value.map { |v| Utils.escape v }.join("&") +
-        "#{domain}#{path}#{expires}"
+        "#{domain}#{path}#{expires}#{secure}"
 
       case self["Set-Cookie"]
       when Array
@@ -58,59 +59,9 @@ module Rack
       when nil
         self["Set-Cookie"] = cookie
       end
-    end
-	end
-
-	module Handler
-		class WEBrick
-
-      def service(req, res)
-        env = req.meta_vars
-        env.delete_if { |k, v| v.nil? }
-
-        env.update({"rack.version" => [0,1],
-                     "rack.input" => StringIO.new(req.body.to_s),
-                     "rack.errors" => STDERR,
-
-                     "rack.multithread" => true,
-                     "rack.multiprocess" => false,
-                     "rack.run_once" => false,
-
-                     "rack.url_scheme" => ["yes", "on", "1"].include?(ENV["HTTPS"]) ? "https" : "http"
-                   })
-
-        env["HTTP_VERSION"] ||= env["SERVER_PROTOCOL"]
-        env["QUERY_STRING"] ||= ""
-        env["REQUEST_PATH"] ||= "/"
-        env.delete "PATH_INFO"  if env["PATH_INFO"] == ""
-
-        status, headers, body = @app.call(env)
-        begin
-          res.status = status.to_i
-          headers.each { |k, vs|
-						# fix for multiple cookies
-						# refer to: http://d.hatena.ne.jp/repeatedly/20080925/1222347465
-					  if k == 'Set-Cookie'
-					    vs.each { |cookie|
-					      res.cookies << cookie
-					    }
-					  else
-					    vs.each { |v|
-					      res[k] = v
-					    }
-					  end
-          }
-					
-          body.each { |part|
-            res.body << part
-          }
-        ensure
-          body.close  if body.respond_to? :close
-        end
-      end
-		end
-	end
-end
+    end # def set_cookie
+	end # class Response
+end # module Rack
 
 
 

@@ -146,8 +146,7 @@ describe Repository do
 		path = Pathname('./spec/test_data')
 		@rep = Repository.new(path, false)
 		Dir.mkdir(@rep.dir_path) unless @rep.dir_path.exist?
-		Dir.mkdir(@rep.entry_dir_path) unless @rep.entry_dir_path.exist?
-		Dir.mkdir(@rep.lock_dir_path) unless @rep.lock_dir_path.exist?
+		@rep.check_valid
 	end
 	
 	after do

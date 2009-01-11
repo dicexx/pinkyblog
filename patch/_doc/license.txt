@@ -1,12 +1,18 @@
 ライセンス・配布条件について
 ============================
 
-Pinky:blogは、基本的にNYSLの元で配布されるフリーソフトウェアです。
-ライセンスの条文については、同梱の NYSL_withfaq.txt をご覧ください。
+Pinky:blogは、基本的にNYSL 0.9982の元で配布されるソフトウェアです。
+
+「このソフトを手にした一人一人が、ご自分の作ったものを扱うのと同じように、
+自由に利用することが出来ます。」（NYSL序文より引用）
+とある通り、再配布や改変などは全て自由に行っていただいて構いません。
+
+ライセンスの条文については、同梱の _doc/copying/NYSL_withfaq.txt をご覧ください。
+
+
 
 ただし、以下のライブラリや画像ファイル・CSSファイルには、著作者の意向により
 異なるライセンスが適用されます。
-
 
 
 - Rack (lib/rack.rb および lib/rack/ 以下の全ファイル)
@@ -16,10 +22,9 @@ Pinky:blogは、基本的にNYSLの元で配布されるフリーソフトウェ
 
     MITライセンスが適用されます。
     詳しくはソースコードの初めの部分にある許諾表示（英文）をご覧ください。
-    また、以下のURLに、オープンソースグループ・ジャパンによる日本語参考訳があります。
 
-    http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license
-
+    また、同梱の _doc/copying/mit_license.txt および
+    _doc/copying/mit_license_ja.txt にも、ライセンスの条文を記載してあります。
 
 
 - amrita-altered (lib/amrita/ 以下の全ファイル）
@@ -30,10 +35,8 @@ Pinky:blogは、基本的にNYSLの元で配布されるフリーソフトウェ
 - rbuconv (lib/uconv.rb, lib/rbuconv.rb, lib/rbuconv_w32.rb, および lib/uconv/ 以下の全ファイル)
 
     Rubyライセンスが適用されます。
-    詳しくは以下のURLにあるライセンス条文をご覧ください。
-
-    http://www.ruby-lang.org/ja/LICENSE.txt
-
+    詳しくは、同梱の _doc/copying/ruby_license_ja.txt あるいは
+		_doc/copying/ruby_license_en.txt （英文）をご覧ください。
 
 
 - SimpleMail（lib/simplemail.rb）
@@ -41,9 +44,8 @@ Pinky:blogは、基本的にNYSLの元で配布されるフリーソフトウェ
 - BlueCloth（mod/translator/markdown/bluecloth.rb）
 
     GPL (General Public License) が適用されます。
-    ライセンスの条文（公衆利用許諾）については、同梱の copying/gpl.txt あるいは
-		copying/gpl_ja.txt （日本語参考役）をご覧ください。
-
+    ライセンスの条文（公衆利用許諾）については、同梱の _doc/copying/gpl.txt あるいは
+		_doc/copying/gpl_ja.txt （日本語参考訳）をご覧ください。
 
 
 - jQuery (res/pinkyblog/script/jquery.min.js)
@@ -52,7 +54,10 @@ Pinky:blogは、基本的にNYSLの元で配布されるフリーソフトウェ
     改変・再配布などの際には、デュアル・ライセンスのままで配布するか
     あるいは、どちらか片方のライセンスを選んで配布することができます。
 
+- Text Area Resizer (res/pinkyblog/script/jquery.textarearesizer.js および同階層の grippie.png)
 
+    jQuery公式サイト内 (http://plugins.jquery.com/project/TextAreaResizer) にて
+		配布されている作品のため、著作者であるbinarybasher氏の意向に従ってください。
 
 
 - 印刷用CSS着せ替えテンプレート (res/pinkyblog/print.css)
@@ -61,8 +66,7 @@ Pinky:blogは、基本的にNYSLの元で配布されるフリーソフトウェ
     同サイトの利用規約(http://az-store.nrym.org/about)に準じます。
 
 
-
 - ATOM1.0アイコン (res/pinkyblog/atom10.png)
 
-    「一色政彦 WEB SITE」blog内の記事(http://www.masahiko.info/blog/archives/000745.html)にて
+    「一色政彦 WEB SITE」blog内の記事 (http://www.masahiko.info/blog/archives/000745.html) にて
 		配布されている作品のため、著作者である一色政彦氏の意向に従ってください。

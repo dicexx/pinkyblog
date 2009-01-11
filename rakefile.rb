@@ -24,7 +24,7 @@ SRCS.include 'release/_doc/**/*'
 SRCS.exclude 'release/_doc/exe_*.txt'
 
 EXE_SRCS = FileList.new
-EXE_SRCS.include 'release/blog_server.exe', 'release/exe_readme.txt', 'release/pinkyblog_conf.rb'
+EXE_SRCS.include 'release/blog_server.exe', 'release/readme.txt', 'release/pinkyblog_conf.rb'
 EXE_SRCS.include 'release/lib/pinkyblog/template/*.*'
 EXE_SRCS.include 'release/lib/rack/**/*.*'
 EXE_SRCS.include 'release/mod/translator/**/*'
@@ -39,9 +39,10 @@ ALL_SRCS = SRCS + EXE_SRCS
 CLEAN.include '*.filelist'
 CLEAN.include 'release/*.exy'
 CLEAN.include 'release/res/feed/*'
-CLOBBER.include 'release/blog_server.exe'
+CLOBBER.include 'release/*.exe'
 CLEAN.include '**/*.cache'
-CLEAN.include 'release/data/*.json'
+CLEAN.include '**/data/*.json'
+CLEAN.include '**/test_data/*.json'
 CLOBBER.include 'pinkyblog-*.zip'
 CLEAN.include '*.zip.tmp'
 
@@ -108,7 +109,7 @@ rule ".filelist" => ALL_SRCS do |task|
 	end
 
 	open(task.name, 'w'){|f|
-		f.puts(list.to_a.map{|x| x.slice(/^release\/(.+)/, 1)})
+		f.puts(list.to_a.map{|x| x.slice(/^.+?\/(.+)/, 1)})
 	}
 	
 	list.each do |fname|

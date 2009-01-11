@@ -70,10 +70,19 @@ module PinkyBlog
 			unless @dir_path.writable? then
 				raise Error, "データを格納するためのディレクトリ #{@dir_path} が読み込めません。\nディレクトリが存在しないか、またはパーミッションに問題があります。"
 			end
+			
+			unless entry_dir_path.exist? then
+				Dir.mkdir(entry_dir_path)
+			end
 		
 			unless entry_dir_path.writable? then
 				raise Error, "記事データを格納するためのディレクトリ #{entry_dir_path} が読み込めません。\nディレクトリが存在しないか、またはパーミッションに問題があります。"
 			end
+			
+			unless lock_dir_path.exist? then
+				Dir.mkdir(lock_dir_path)
+			end
+
 			
 			unless lock_dir_path.writable? then
 				raise Error, "ロック情報を作成するためのディレクトリ #{lock_dir_path} が読み込めません。\nディレクトリが存在しないか、またはパーミッションに問題があります。"
